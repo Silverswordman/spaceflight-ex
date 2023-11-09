@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Row>
+      <Row className="justify-content-center">
         {news.map((card) => (
           <SpaceCard key={card.id} Infos={card} />
         ))}

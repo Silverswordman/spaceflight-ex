@@ -8,16 +8,17 @@ const SpaceCard = (props: { Infos: Infos }) => {
   const { Infos } = props;
 
   return (
-    <Col>
-      <Card>
+    <Col xs={12} sm={6} md={4} className="m-2 ">
+      <Card className="h-100">
         <Card.Img variant="top" src={Infos.image_url} />
-        <Card.Body>
+        <Card.Text className="small">{Infos.published_at}</Card.Text>
+        <Card.Body className=" d-flex  flex-column  ">
           <Card.Title>{Infos.title}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Text>{Infos.summary}</Card.Text>
+
+          <Button variant="info" className="align-self-end  " href={Infos.url}>
+            More
+          </Button>
         </Card.Body>
       </Card>
     </Col>
